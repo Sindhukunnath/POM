@@ -26,7 +26,7 @@ public class test {
         driver.manage().window().maximize();
         driver.get(Configuartion.testsite);
         LoginTest t = PageFactory.initElements(driver,LoginTest.class);
-        MyAccountTest accountPage= t.Login("skunnathpuliyakode@expedia.com","sindhu123");
+        MyAccountTest accountPage= t.Login("skunnathpuliyakode@expedia.com","xxxxx");
         driver.manage().timeouts().implicitlyWait(2L, TimeUnit.SECONDS);
     accountPage.account();
     accountPage.updateaccountsettings();
@@ -36,7 +36,8 @@ public class test {
     WelcomeRewardsPage WR=  accountPage.reviews();
     driver.navigate().back();
     YourBookingsPage bookings=  WR.Rewardslink();
-    SignoutTest logoff= bookings.mybookingslink();
+FindBookingsPage find = bookings.mybookingslink();
+    SignoutTest logoff= find.mybook();
     logoff.signoutlink();
 //driver.quit();
 

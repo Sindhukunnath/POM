@@ -23,9 +23,9 @@ public class YourBookingsPage {
     @FindBy(xpath= Configuartion.mybookings)
         public WebElement mybookings;
 
-    public SignoutTest mybookingslink(){
+    public FindBookingsPage mybookingslink(){
 
         mybookings.click();
-        return PageFactory.initElements(driver,SignoutTest.class);
+        return PageFactory.initElements(driver,FindBookingsPage.class);
     }
 }

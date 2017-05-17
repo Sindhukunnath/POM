@@ -29,6 +29,11 @@ public static final String testsite= "https://uk.hotels.com";
     //yourbookingspage
     public static final String mybookings = "//*[@id='hdr-customer-bookings']";
 
+    //findbookingspage
+    public static final String findbookingslink = "//*[@id=\"main-content\"]/div/div[2]/div[1]/div[3]/a";
+    public static final String  confirmationnumber= "//*[@id=\"fb-conf-num\"]";
+    public static final String  lastname="//*[@id=\"fb-conf-lastname\"]";
+    public static final String findbookingbutton =  "//*[@id=\"confirmation-number\"]/form/button";
     //signoutpage
 
     public static final String  account = "//*[@id='hdr-account']";
