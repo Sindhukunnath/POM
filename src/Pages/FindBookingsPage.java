@@ -25,13 +25,13 @@ public class FindBookingsPage {
     public WebElement lastname;
     @FindBy(xpath= Configuartion.findbookingbutton)
     public WebElement mybookingslink;
-    public SignoutTest mybook(){
+    public LandingPages mybook(){
 
         findbookingslink.click();
         confirmationnumber.sendKeys("138031222312");
         lastname.sendKeys("kunnath");
         mybookingslink.click();
-        return PageFactory.initElements(driver,SignoutTest.class);
+        return PageFactory.initElements(driver,LandingPages.class);
     }
     }
 

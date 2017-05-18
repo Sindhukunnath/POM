@@ -34,6 +34,28 @@ public static final String testsite= "https://uk.hotels.com";
     public static final String  confirmationnumber= "//*[@id=\"fb-conf-num\"]";
     public static final String  lastname="//*[@id=\"fb-conf-lastname\"]";
     public static final String findbookingbutton =  "//*[@id=\"confirmation-number\"]/form/button";
+
+    //landing pages
+
+    public static final String travelGuide= "//*[@id='resp-footer']/div/div[1]/div[1]/ul[2]/li[1]/a";
+    public static final String  top50cities = "//*[@id='resp-footer']/div[2]/div[1]/div[1]/ul[2]/li[2]/a";
+    public static final String  allcountries = "//*[@id=\"resp-footer\"]/div[2]/div[1]/div[1]/ul[2]/li[3]/a";
+
+
+    public static final String  allcountriessub ="//*[@id=\"allcountries\"]/div[2]/div/div/div/div[1]/div/ul/li[4]/a/bdi";
+    public static final String  showdeals ="//*[@id=\"countrylanding\"]/div[3]/div/div/div/div[2]/div/div/div/form/div[4]/button";
+    public static final String allhotels ="//*[@id=\"resp-footer\"]/div[2]/div[1]/div[1]/ul[2]/li[4]/a";
+    public static final String  allhotelpage1="//*[@id=\"hotelindex\"]/div[3]/div/div/div/div/div/ul/li[3]/a/bdi";
+    public static final String  allhotelpage2= "//*[@id=\"hotelindex\"]/div[3]/div/div/div/div/div/ul/li[2]/a/bdi";
+    public static final String  allhotelpage3= "//*[@id=\"hotelindex\"]/div[3]/div/div/div/div/div/ul/li[2]/a/bdi";
+    public static final String  siteindexpage1= "//*[@id=\"resp-footer\"]/div[2]/div[1]/div[1]/ul[2]/li[5]/a";
+    public static final String  siteindexpage2= "//*[@id=\"siteindex\"]/div[2]/div/div/div/div[1]/div/ul/li[4]/a/bdi";
+
+    //homepage
+    public static final String  home="//*[@id=\"hdr-home\"]";
+    public static final String  autosuggest= "//*[@id=\"qf-0q-destination\"]";
+    public static final String  submitsearch="//*[@id=\"main-content\"]/main/div/div/div[1]/div/div[1]/div[1]/div/div/form/div[5]/button";
+
     //signoutpage
 
     public static final String  account = "//*[@id='hdr-account']";

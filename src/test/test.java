@@ -26,8 +26,10 @@ public class test {
         driver.manage().window().maximize();
         driver.get(Configuartion.testsite);
         LoginTest t = PageFactory.initElements(driver,LoginTest.class);
-        MyAccountTest accountPage= t.Login("skunnathpuliyakode@expedia.com","xxxxx");
+        MyAccountTest accountPage= t.Login("skunnathpuliyakode@expedia.com","Sify200900");
         driver.manage().timeouts().implicitlyWait(2L, TimeUnit.SECONDS);
+        String sessionId = driver.manage().getCookieNamed("SESSID").toString();
+        System.out.println(sessionId);
     accountPage.account();
     accountPage.updateaccountsettings();
     driver.navigate().back();
@@ -37,8 +39,21 @@ public class test {
     driver.navigate().back();
     YourBookingsPage bookings=  WR.Rewardslink();
 FindBookingsPage find = bookings.mybookingslink();
-    SignoutTest logoff= find.mybook();
-    logoff.signoutlink();
+LandingPages landing = find.mybook();
+landing.travelguide();
+driver.manage().timeouts().implicitlyWait(5l,TimeUnit.SECONDS);
+landing.setTop50cities();
+driver.manage().timeouts().implicitlyWait(5l,TimeUnit.SECONDS);
+landing.setAllcountries();
+landing.setShowdeals();
+landing.setAllhotels();
+
+   HomePage home= landing.setSiteIndex();
+   SignoutTest signout=home.Userflow();
+   signout.signoutlink();
+
+
+
 //driver.quit();
 
     }
