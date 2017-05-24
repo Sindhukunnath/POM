@@ -2,6 +2,7 @@ package Pages;
 
 import Config.Configuartion;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -28,12 +29,15 @@ public class HomePage {
     public WebElement submitsearch;
     public SignoutTest Userflow  (){
     home.click();
+    autosuggest.clear();
     autosuggest.sendKeys("Las Vegas, Nevada, United States of America");
+    autosuggest.sendKeys(Keys.TAB);
     submitsearch.click();
    //String start= "//*[@id=\"filter-guest-rating\"]/div[2]/div/div[2]/div[2]";
         WebElement Slider = driver.findElement(By.xpath(("//*[@id=\"filter-guest-rating\"]/div[2]/div/div[2]/div[3]")));
         Actions builder = new Actions(driver);
         builder.clickAndHold(Slider).moveByOffset(40,0).release().build();
+
         return PageFactory.initElements(driver,SignoutTest.class);
         
 

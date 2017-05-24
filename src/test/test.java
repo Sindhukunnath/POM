@@ -9,7 +9,9 @@ import org.openqa.selenium.support.PageFactory;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.Iterator;
 import java.util.Properties;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -40,17 +42,21 @@ public class test {
     YourBookingsPage bookings=  WR.Rewardslink();
 FindBookingsPage find = bookings.mybookingslink();
 LandingPages landing = find.mybook();
+driver.manage().timeouts().implicitlyWait(5l,TimeUnit.SECONDS);
+
+
+
 landing.travelguide();
-driver.manage().timeouts().implicitlyWait(5l,TimeUnit.SECONDS);
-landing.setTop50cities();
-driver.manage().timeouts().implicitlyWait(5l,TimeUnit.SECONDS);
+
+        landing.setTop50cities();
+
+
 landing.setAllcountries();
 landing.setShowdeals();
 landing.setAllhotels();
-
-   HomePage home= landing.setSiteIndex();
-   SignoutTest signout=home.Userflow();
-   signout.signoutlink();
+HomePage home= landing.setSiteIndex();
+SignoutTest signout=home.Userflow();
+signout.signoutlink();
 
 
 
